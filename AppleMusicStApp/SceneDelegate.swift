@@ -2,8 +2,8 @@
 //  SceneDelegate.swift
 //  AppleMusicStApp
 //
-//  Created by joonwon lee on 2020/01/11.
-//  Copyright © 2020 com.joonwon. All rights reserved.
+//  Created by keunhyeong on 2020/10/04.
+//  Copyright © 2020 KeunHyeong. All rights reserved.
 //
 
 import UIKit

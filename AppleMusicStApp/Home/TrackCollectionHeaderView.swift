@@ -2,8 +2,8 @@
 //  TrackCollectionHeaderView.swift
 //  AppleMusicStApp
 //
-//  Created by joonwon lee on 2020/03/15.
-//  Copyright © 2020 com.joonwon. All rights reserved.
+//  Created by keunhyeong on 2020/10/04.
+//  Copyright © 2020 KeunHyeong. All rights reserved.
 //
 
 import UIKit
@@ -23,9 +23,20 @@ class TrackCollectionHeaderView: UICollectionReusableView {
     
     func update(with item: AVPlayerItem) {
         // TODO: 헤더뷰 업데이트 하기
+        
+        self.item = item
+        guard let track = item.convertToTrack() else {
+            return
+        }
+        
+        self.thumbnailImageView.image = track.artwork
+        self.descriptionLabel.text = "Today's pick is \(track.artist)'s album - \(track.albumName), Let listen."
     }
     
     @IBAction func cardTapped(_ sender: UIButton) {
         // TODO: 탭했을때 처리
+        
+        guard let todaysItems = item else{return}
+        tapHandler?(todaysItems)
     }
 }

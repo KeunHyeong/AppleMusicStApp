@@ -1,14 +1,15 @@
 //
-//  TrackCollectionViewCell.swift
+//  TrackCell.swift
 //  AppleMusicStApp
 //
-//  Created by keunhyeong on 2020/10/04.
-//  Copyright © 2020 KeunHyeong. All rights reserved.
+//  Created by KeunHyeong on 2020/10/15.
+//  Copyright © 2020 com.joonwon. All rights reserved.
 //
 
 import UIKit
 
-class TrackCollectionViewCell: UICollectionViewCell {
+class TrackCell: UICollectionViewCell {
+
     @IBOutlet weak var trackThumbnail: UIImageView!
     @IBOutlet weak var trackTitle: UILabel!
     @IBOutlet weak var trackArtist: UILabel!
@@ -28,4 +29,5 @@ class TrackCollectionViewCell: UICollectionViewCell {
         trackTitle.text = track.title
         trackArtist.text = track.artist
     }
+
 }
